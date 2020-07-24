@@ -41,6 +41,7 @@ function clickHandler(event){
   if (event.target === answerButton && !userQuestion.value == ''){
     toggleBall(eightBall, result)
     generateAnswer(userQuestion.value, getRandomAnswer())
+    toggleColor(clearButton);
   }
   if (event.target === clearButton ){
       questionDisplay.innerText = '';
@@ -64,4 +65,7 @@ function getRandomAnswer() {
 function toggleBall(ball, result) {
   ball.classList.toggle("hidden");
   result.classList.toggle("hidden");
+};
+function toggleColor(button) {
+  button.classList.toggle("red-button");
 };
