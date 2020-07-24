@@ -4,8 +4,14 @@ var eightBall = document.querySelector(".eight-ball")
 var result = document.querySelector(".display")
 var questionDisplay = document.querySelector("h1")
 var answerDisplay = document.querySelector("p")
+var clearButton = document.querySelector(".clear-button");
 
-var displayAnswer = {};
+class DisplayAnswer {
+  constructor(question, answer){
+    this.question = question;
+    this.answer = answer;
+  }
+};
 var answers = [
   "It is certain.",
   "It is decidedly so.",
@@ -34,17 +40,18 @@ window.addEventListener('click', clickHandler)
 function clickHandler(event){
   if (event.target === answerButton ){
     toggleBall(eightBall, result)
-    generateAnswer()
-    addToHtml();
+    generateAnswer(userQuestion.value, getRandomAnswer())
   }
+  if (event.target === clearButton ){
+      toggleBall(eightBall, result)
+    }
 }
-function addToHtml(){
-  questionDisplay.append(displayAnswer.question);
-  answerDisplay.append(displayAnswer.answer);
-}
-function generateAnswer(){
-  displayAnswer.question = userQuestion.value;
-  displayAnswer.answer = getRandomAnswer();
+
+function generateAnswer(first, last){
+  var resultQuestion = new DisplayAnswer(first,last);
+  questionDisplay.append(resultQuestion.question);
+  answerDisplay.append(resultQuestion.answer);
+  userQuestion.value = '';
 }
 
 function getRandomAnswer() {
