@@ -22,7 +22,7 @@ header{
   align-self: center;
   color: #2B4E80;
   font-family: 'Life Savers', serif;
-  font-size: 64px;
+  font-size: 60px;
   margin-bottom: 50px;
 }
 .hidden{
@@ -39,14 +39,24 @@ header{
 input {
   text-align: center;
   margin: 15px;
-  height: 40px;
+  height: 45px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #2B4E80;
+  opacity: 0.6;
 }
 .answer-button {
+  margin-top: -5px;
   margin-left: 15px;
   margin-right: 15px;
-  /* margin-left: 15px; */
-  background-color: #607AA0;
-  height: 40px;
+  background-color: #2B4E80;
+  height: 45px;
+  opacity: 0.6;
+  border: none;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
 }
 .woody {
   height: 400px;
@@ -61,12 +71,20 @@ input {
   align-self: center;
 }
 .display h1 {
-  margin-top: -75px;
+  margin-top: -125px;
 }
 .clear-button{
-  position: absolute;
-  margin-top: 360px;
-  width: 45px;
-  margin-left: 435px;
+  margin-top: 50px;
+  height: 30px;
+  width: 60px;
+  margin-left: 425px;
   background-color: #D0CDCD;
+  opacity: 0.6;
+  border: none;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.red-button{
+  background-color: #DE4841;
+  opacity: 1;
 }
