@@ -38,11 +38,13 @@ var answers = [
 window.addEventListener('click', clickHandler)
 
 function clickHandler(event){
-  if (event.target === answerButton ){
+  if (event.target === answerButton && !userQuestion.value == ''){
     toggleBall(eightBall, result)
     generateAnswer(userQuestion.value, getRandomAnswer())
   }
   if (event.target === clearButton ){
+      questionDisplay.innerText = '';
+      answerDisplay.innerText = '';
       toggleBall(eightBall, result)
     }
 }
